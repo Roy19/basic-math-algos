@@ -1,0 +1,50 @@
+Sources :
+ ----->https://www.geeksforgeeks.org/modulo-1097-1000000007/
+ ----->https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-1/tutorial/
+----------------------
+----------------------
+Topics covered are:
+----------------------
+----------------------
+	1> Modular Arithmetic
+	2> Modular Expansion
+	3> Greatest Common Divisor(GCD)
+	4> Extended Euclidean Algorithm
+	5> Modular Multiplicative Inverse
+
+========================
+1> Modular Arithmetic
+========================
+When one number divides another, the modulo operation finds the 
+remainder. It is denoted by the % symbol. Ex: 5%2 = 1.
+------------
+Properties:
+------------
+	1> (a+b)%c = (a%c+b%c)%c
+	2> (a*b)%c = ((a%c)*(b%c))%c
+	3> (a-b)%c = ((a%c)-(b%c)+c)%c
+	4> (a/b)%c = ((a%c)/(b%c))%c
+	
+Most programming competitions would have you do modulo 10^9+7 which 
+is prime to address the common problem of integer overflow.
+
+==========================
+2> Modular Expansion
+==========================
+Common way to do it would be:
+	expansion(num,pow){
+		while(num > 0)
+		{	result = result*num;
+			num -= 1;
+		}
+	}
+In that case time complexity is O(n). But for large inputs like n = 10^18
+this just dosen't work.
+
+So use instead an algorithm of time complexity O(log n).
+
+	num^pow = { num,                     if pow = 1     }
+			  { num^(pow/2)^2, 		     if pow is even }
+			  { num*(num^((pow-1)/2)^2), if pow is odd  }
+			  
+
