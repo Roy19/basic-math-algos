@@ -46,5 +46,17 @@ So use instead an algorithm of time complexity O(log n).
 	num^pow = { num,                     if pow = 1     }
 			  { num^(pow/2)^2, 		     if pow is even }
 			  { num*(num^((pow-1)/2)^2), if pow is odd  }
-			  
+
+============================
+3> GCD
+============================
+Normal Euclidean Algorithm says the GCD(a,b) = GCD(b,b % a) = .... until 
+b % a == 0.
+
+Can be implemented both using recursive and iterative methods. Time complexity 
+is the same, i.e ,O(log(max(a,b))) however space complexity does not hold true 
+for the same, i.e, in case of iterative method it's O(1) while in case of recursive 
+method it's O(log(max(a,b)).
+
+
 
