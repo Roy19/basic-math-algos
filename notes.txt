@@ -58,5 +58,20 @@ is the same, i.e ,O(log(max(a,b))) however space complexity does not hold true
 for the same, i.e, in case of iterative method it's O(1) while in case of recursive 
 method it's O(log(max(a,b)).
 
+=================================
+4> Extended Euclidean Algorithm
+=================================
+What this algorithm does is it use the concept of Ax+By = GCD(A,B), where x and y are 
+integers. How is it done is shown below.
+
+We know that GCD(A,B) = GCD(B,B%A) = Bx+(A%B)y = Ax+By		-(1)
+But A%B = A - B*floor(A/B).
+So Bx1 + (A-floor(A/B)*B)y1 = GCD(B,A%B)
+Substituting it a bit more:
+B(x1 - floor(A/B)y1) + Ay1 = GCD(B,A%B)						-(3)
+Comparing co-efficients in (1) and (3):
+x = y1
+y = x1 - floor(A/B)y1
+
 
 
