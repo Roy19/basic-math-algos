@@ -73,5 +73,25 @@ Comparing co-efficients in (1) and (3):
 x = y1
 y = x1 - floor(A/B)y1
 
+Time complexity both are O(log(max(A,B))).
+
+==================================
+5> Modular Multiplicative Inverse
+==================================
+We want to find a number B such that (A.B)%M = 1. So from the concept of modular arithmetic,
+this implies that:
+
+A.B = 1 (mod M) 
+
+Which gives us that B should be in the range [1,M-1]. Why? 
+Since (A.B)%M = (A%M . B%M)%M.
+Now since B%M is in the range [0,M-1], we have B is in the range [0,M-1]. But 0 is invalid, so B is
+in the range [1,M-1]
+
+Time complexity O(M)
+
+Existence of Modular Multiplicative Inverse: The Modular Multiplicative Inverse can only exists
+									if A and M are co-prime numbers ,i.e, GCD(A,M) = 1
+
 
 
