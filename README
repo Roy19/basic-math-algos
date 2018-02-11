@@ -91,7 +91,7 @@ in the range [1,M-1]
 Time complexity O(M)
 
 Existence of Modular Multiplicative Inverse: The Modular Multiplicative Inverse can only exists
-									if A and M are co-prime numbers ,i.e, GCD(A,M) = 1
+if A and M are co-prime numbers ,i.e, GCD(A,M) = 1.
 
 
 
